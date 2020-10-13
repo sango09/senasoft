@@ -112,7 +112,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sena_soft',
         'USER': 'postgres',
-        'PASSWORD': '0810',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'POST': '5432'
     }
