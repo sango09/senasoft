@@ -82,3 +82,6 @@ typings/
 # Docs Custom
 .cache/
 yarn-error.log
+
+backend/config/settigns.py
+settings.py
