@@ -1,0 +1,31 @@
+# Base
+pillow == 7.2.0
+markdown == 3.3
+pytz==2018.7
+
+# DataBase Conection
+mysqlclient == 2.0.1
+psycopg2-binary == 2.8.6
+
+# Enviroment
+django-environ == 0.4.5
+
+# Django
+Django >= 3.1.2
+
+# Django REST Framework
+djangorestframework == 3.12.1
+django-filter == 2.4.0
+django-cleanup == 5.1.0
+django-oauth-toolkit >= 1.3.2
+
+# JWT
+pyjwt >= 1.7.1
+
+# Password security
+argon2-cffi == 18.3.0
+
+# Static files
+whitenoise == 4.1.2
+
+
