@@ -10,5 +10,7 @@ urlpatterns = [
     # Django Admin
     path('admin/', admin.site.urls),
     # Include APIs
+    path('', include(('apis.users.urls', 'users'), namespace='users'))
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

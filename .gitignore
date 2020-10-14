@@ -85,3 +85,12 @@ yarn-error.log
 
 backend/config/settigns.py
 settings.py
+backend/apis/users/migrations/
+
+backend/.idea/
+
+backend/apis/family_group/migrations/
+
+backend/apis/medic/migrations/
+
+backend/apis/pacient/migrations/

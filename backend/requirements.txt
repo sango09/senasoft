@@ -27,4 +27,5 @@ argon2-cffi>= 20.1.0
 # Static files
 whitenoise== 5.2.0
 
-
+# Conection frontend
+django-cors-headers == 3.5.0

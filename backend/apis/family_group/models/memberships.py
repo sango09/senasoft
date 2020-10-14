@@ -18,9 +18,9 @@ class Memberships(ModelUtil):
     """
     user = models.ForeignKey('users.User', on_delete=models.CASCADE)
     family_group = models.ForeignKey('family_group.FamilyGroup', on_delete=models.CASCADE)
+    pacient = models.ForeignKey('pacient.Pacient', on_delete=models.CASCADE)
     is_admin = models.BooleanField('Titular', default=False)
-    parents = models.CharField('parentesco', max_length=40)
 
     def __str__(self):
         """Regresa el username y el grupo familiar al que pertenece"""
-        return f'{self.user.username} hace parte del grupo familiar con el paresto de {self.parents}'
+        return f'{self.user.username} ahora hace parte del grupo familiar'
