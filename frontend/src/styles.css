@@ -2,3 +2,58 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.pulmon{
+    width: 30rem;
+    padding-top: 50px;
+    
+}
+
+#card-login{
+    margin: 200px;
+}
+
+#corona{
+    width: 30rem;
+    margin-top: 45px;
+}
+
+#bienvenida{
+    margin-top: 200px;
+}
+#navbar{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.089);
+    color: black;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(88, 179, 231);
+}
+a:active{
+    color: rgb(41, 55, 61);
+}
+
+.dropdown-menu{
+    background-color: #A0CCCF;
+}
+
+#botonSalir{
+    margin-left: 680px;
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
