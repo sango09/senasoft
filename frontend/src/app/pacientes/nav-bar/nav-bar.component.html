@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/app-inicio"><i class="pi pi-globe"></i><i class="pi pi-backward"></i> Centro médico online</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="/app-inicio"><i class="pi pi-home"></i> Inicio<span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/app-autorizacion"><i class="pi pi-check-square"></i> Autorización<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tramites
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/app-incapacidades"><i class="pi pi-calendar"></i> Incapacidades</a>
+            <a class="dropdown-item" routerLink="/app-cambio-medico"><i class="pi pi-clone"></i> Cambiar de médico</a>
+            <a class="dropdown-item" routerLink="/app-citas"><i class="pi pi-calendar-times"></i> Citas</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="pi pi-sitemap"></i> Familia
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="/app-beneficiarios"><i class="pi pi-users"></i> Beneficiarios</a>
+              <a class="dropdown-item" routerLink="/app-anadir-familiar"><i class=""></i>Añadir familiares</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/"><i class="pi pi-sign-out"></i></a>
+          </li>
+      </ul>
+    </div>
+  </nav>
