@@ -23,12 +23,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 #bienvenida{
     margin-top: 200px;
 }
-#navbar{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.089);
-    color: black;
-    text-decoration: none;
-}
+
 a {
     text-decoration: none;
     color: black;
