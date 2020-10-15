@@ -49,6 +49,7 @@ import {BeneficiariosComponent} from './pacientes/beneficiarios/beneficiarios.co
 import {AnadirFamiliarComponent} from './pacientes/anadir-familiar/anadir-familiar.component';
 import { MainPacientesComponent } from './pacientes/main-pacientes/main-pacientes.component';
 import {LoginService} from "./services/login.service";
+import { CrearCitaComponent } from './pacientes/crear-cita/crear-cita.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import {LoginService} from "./services/login.service";
     CitasComponent,
     BeneficiariosComponent,
     AnadirFamiliarComponent,
-    MainPacientesComponent
+    MainPacientesComponent,
+    CrearCitaComponent
   ],
   imports: [
     BrowserModule,
