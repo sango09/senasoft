@@ -10,26 +10,25 @@ import {RatingModule} from 'primeng/rating';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
-import { LoginComponent } from './auth/login/login.component';
-import { FormControl, FormGroup, Validators,FormBuilder,ReactiveFormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MainMedicoComponent } from './dashboardMedico/main-medico/main-medico.component';
-import { HomeMedicoComponent } from './dashboardMedico/home-medico/home-medico.component';
-import { DetallesPacientesComponent } from './dashboardMedico/detalles-pacientes/detalles-pacientes.component';
-import { DetalllesFamiliasComponent } from './dashboardMedico/detallles-familias/detallles-familias.component';
-import { PacientesAsociadosComponent } from './dashboardMedico/pacientes-asociados/pacientes-asociados.component';
-import { RemitirPacientesComponent } from './dashboardMedico/remitir-pacientes/remitir-pacientes.component';
-import { ListaRemitidosComponent } from './dashboardMedico/lista-remitidos/lista-remitidos.component';
-import { AtenderCitaComponent } from './dashboardMedico/atender-cita/atender-cita.component';
-import { ListaCitasComponent } from './dashboardMedico/lista-citas/lista-citas.component';
-import { RemitirIncapacidadComponent } from './dashboardMedico/remitir-incapacidad/remitir-incapacidad.component';
-import { RemitirExamenesComponent } from './dashboardMedico/remitir-examenes/remitir-examenes.component';
-import { RemitirMedicamentosComponent } from './dashboardMedico/remitir-medicamentos/remitir-medicamentos.component';
-import { MainComponent } from './pacientes/main/main.component';
-import { NavBarComponent } from './pacientes/nav-bar/nav-bar.component';
-import { InicioComponent } from './pacientes/inicio/inicio.component';
-import { AutorizacionComponent } from './pacientes/autorizacion/autorizacion.component';
-import { CustomerService } from './pacientes/autorizacion/pacientesservice';
+import {LoginComponent} from './auth/login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MainMedicoComponent} from './dashboardMedico/main-medico/main-medico.component';
+import {HomeMedicoComponent} from './dashboardMedico/home-medico/home-medico.component';
+import {DetallesPacientesComponent} from './dashboardMedico/detalles-pacientes/detalles-pacientes.component';
+import {DetalllesFamiliasComponent} from './dashboardMedico/detallles-familias/detallles-familias.component';
+import {PacientesAsociadosComponent} from './dashboardMedico/pacientes-asociados/pacientes-asociados.component';
+import {RemitirPacientesComponent} from './dashboardMedico/remitir-pacientes/remitir-pacientes.component';
+import {ListaRemitidosComponent} from './dashboardMedico/lista-remitidos/lista-remitidos.component';
+import {AtenderCitaComponent} from './dashboardMedico/atender-cita/atender-cita.component';
+import {ListaCitasComponent} from './dashboardMedico/lista-citas/lista-citas.component';
+import {RemitirIncapacidadComponent} from './dashboardMedico/remitir-incapacidad/remitir-incapacidad.component';
+import {RemitirExamenesComponent} from './dashboardMedico/remitir-examenes/remitir-examenes.component';
+import {RemitirMedicamentosComponent} from './dashboardMedico/remitir-medicamentos/remitir-medicamentos.component';
+import {MainComponent} from './pacientes/main/main.component';
+import {NavBarComponent} from './pacientes/nav-bar/nav-bar.component';
+import {InicioComponent} from './pacientes/inicio/inicio.component';
+import {AutorizacionComponent} from './pacientes/autorizacion/autorizacion.component';
+import {CustomerService} from './pacientes/autorizacion/pacientesservice';
 
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
@@ -42,12 +41,12 @@ import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
-import { IncapacidadesComponent } from './pacientes/incapacidades/incapacidades.component';
-import { CambioMedicoComponent } from './pacientes/cambio-medico/cambio-medico.component';
+import {IncapacidadesComponent} from './pacientes/incapacidades/incapacidades.component';
+import {CambioMedicoComponent} from './pacientes/cambio-medico/cambio-medico.component';
 import {InputTextareaModule} from 'primeng/inputtextarea';
-import { CitasComponent } from './pacientes/citas/citas.component';
-import { BeneficiariosComponent } from './pacientes/beneficiarios/beneficiarios.component';
-import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-familiar.component';
+import {CitasComponent} from './pacientes/citas/citas.component';
+import {BeneficiariosComponent} from './pacientes/beneficiarios/beneficiarios.component';
+import {AnadirFamiliarComponent} from './pacientes/anadir-familiar/anadir-familiar.component';
 
 
 @NgModule({
@@ -65,7 +64,7 @@ import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-fami
     ListaCitasComponent,
     RemitirIncapacidadComponent,
     RemitirExamenesComponent,
-    RemitirMedicamentosComponent
+    RemitirMedicamentosComponent,
     MainComponent,
     NavBarComponent,
     InicioComponent,
@@ -85,7 +84,7 @@ import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-fami
     RatingModule,
     MatTableModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     FormsModule,
     TableModule,
     CalendarModule,
@@ -102,7 +101,7 @@ import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-fami
     ReactiveFormsModule
   ],
   providers: [CustomerService],
-  bootstrap: [AppComponent,MainComponent,NavBarComponent]
+  bootstrap: [AppComponent, MainComponent, NavBarComponent]
 })
 export class AppModule {
 }
