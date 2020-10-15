@@ -35,8 +35,8 @@ class User(ModelUtil, AbstractUser):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'type_id', 'birth_date']
 
-    is_medic = models.BooleanField('Es medico', null=False)
-    is_pacient = models.BooleanField('Es paciente', null=False)
+    is_medic = models.BooleanField('Es medico', default=False)
+    is_pacient = models.BooleanField('Es paciente', default=False)
 
     def __str__(self):
         """Regresa el username"""

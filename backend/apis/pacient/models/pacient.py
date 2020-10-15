@@ -19,3 +19,6 @@ class Pacient(ModelUtil):
     # clinic_history = models.FileField()
     eps = models.CharField(max_length=15)
     medic = models.ForeignKey('medic.Medic', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Paciente {self.user.first_name} {self.user.last_name}'

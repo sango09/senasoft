@@ -21,6 +21,15 @@ class Memberships(ModelUtil):
     pacient = models.ForeignKey('pacient.Pacient', on_delete=models.CASCADE)
     is_admin = models.BooleanField('Titular', default=False)
 
+    affiliated = models.PositiveIntegerField(default=0)
+    remaining_affiliates = models.PositiveIntegerField(default=0)
+    affiliated_by = models.ForeignKey(
+        'users.User',
+        null=True,
+        on_delete=models.CASCADE,
+        related_name='affiliated_by'
+    )
+
     def __str__(self):
         """Regresa el username y el grupo familiar al que pertenece"""
-        return f'{self.user.username} ahora hace parte del grupo familiar'
+        return f'{self.user.username} hace parte del grupo familiar'

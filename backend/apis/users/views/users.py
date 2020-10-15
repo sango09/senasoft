@@ -12,9 +12,11 @@ from apis.users.serializers import (
     UserSingupSerializer,
     UserLoginSerializer,
 )
+from apis.family_group.serializers import FamilyModelSerializer
 
 # Modelos
 from apis.users.models import User
+from apis.family_group.models import FamilyGroup
 
 
 class UserViewSet(mixins.RetrieveModelMixin,
@@ -50,3 +52,16 @@ class UserViewSet(mixins.RetrieveModelMixin,
             'access_token': token
         }
         return Response(data, status=status.HTTP_201_CREATED)
+
+    def retrieve(self, request, *args, **kwargs):
+        """Agrega informacion extra a la respuesta"""
+        response = super(UserViewSet, self).retrieve(request, *args, **kwargs)
+        family_group = FamilyGroup.objects.filter(
+            members=request.user
+        )
+        data = {
+            'user': response.data,
+            'family_group': FamilyModelSerializer(family_group, many=True).data
+        }
+        response.data = data
+        return response

@@ -14,6 +14,8 @@ class FamilyGroup(ModelUtil):
     parte del sistema y son titulares. Puede agregar familiares y se genera un
     usuario y contraseña automatica para que el familiar pueda hacer uso del sistema
     """
+    slug_name = models.CharField(max_length=25)
+
     members = models.ManyToManyField(
         'users.User',
         through='family_group.Memberships',
