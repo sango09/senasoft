@@ -47,6 +47,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CitasComponent} from './pacientes/citas/citas.component';
 import {BeneficiariosComponent} from './pacientes/beneficiarios/beneficiarios.component';
 import {AnadirFamiliarComponent} from './pacientes/anadir-familiar/anadir-familiar.component';
+import { MainPacientesComponent } from './pacientes/main-pacientes/main-pacientes.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import {AnadirFamiliarComponent} from './pacientes/anadir-familiar/anadir-famili
     CambioMedicoComponent,
     CitasComponent,
     BeneficiariosComponent,
-    AnadirFamiliarComponent
+    AnadirFamiliarComponent,
+    MainPacientesComponent
   ],
   imports: [
     BrowserModule,

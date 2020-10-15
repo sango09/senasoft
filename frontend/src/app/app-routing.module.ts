@@ -21,15 +21,20 @@ import { RemitirExamenesComponent } from './dashboardMedico/remitir-examenes/rem
 import { RemitirIncapacidadComponent } from './dashboardMedico/remitir-incapacidad/remitir-incapacidad.component';
 import { RemitirMedicamentosComponent } from './dashboardMedico/remitir-medicamentos/remitir-medicamentos.component';
 import { RemitirPacientesComponent } from './dashboardMedico/remitir-pacientes/remitir-pacientes.component';
+import { MainPacientesComponent } from './pacientes/main-pacientes/main-pacientes.component';
 
 const routes: Routes = [
-  {path: 'app-inicio', component: InicioComponent},
-  {path: 'app-autorizacion', component: AutorizacionComponent},
-  {path: 'app-incapacidades', component: IncapacidadesComponent},
-  {path: 'app-cambio-medico', component: CambioMedicoComponent},
-  {path: 'app-citas', component: CitasComponent},
-  {path: 'app-beneficiarios', component: BeneficiariosComponent},
-  {path: 'app-anadir-familiar', component: AnadirFamiliarComponent},
+  {path: 'mainPacientes', component: MainPacientesComponent,
+  children: [
+    {path: 'app-inicio', component: InicioComponent},
+    {path: 'app-autorizacion', component: AutorizacionComponent},
+    {path: 'app-incapacidades', component: IncapacidadesComponent},
+    {path: 'app-cambio-medico', component: CambioMedicoComponent},
+    {path: 'app-citas', component: CitasComponent},
+    {path: 'app-beneficiarios', component: BeneficiariosComponent},
+    {path: 'app-anadir-familiar', component: AnadirFamiliarComponent},
+  ]
+  },
   {path: 'login', component: LoginComponent},
   {path: 'medico', component: MainMedicoComponent,
   children: [
