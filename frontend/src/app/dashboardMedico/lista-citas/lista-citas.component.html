@@ -7,9 +7,9 @@
 
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-            <ng-container matColumnDef="idSolicitante">
-                <th mat-header-cell *matHeaderCellDef> ID solicitante </th>
-                <td mat-cell *matCellDef="let element"> {{element.idSolicitante}} </td>
+            <ng-container matColumnDef="documento">
+                <th mat-header-cell *matHeaderCellDef> Numero de documento </th>
+                <td mat-cell *matCellDef="let element"> {{element.documento}} </td>
             </ng-container>
 
             <ng-container matColumnDef="nombre">
@@ -35,7 +35,7 @@
 
             <ng-container matColumnDef="eps">
                 <th mat-header-cell *matHeaderCellDef> EPS </th>
-                <td mat-cell *matCellDef="let element"> {{element.eps}} </td>
+                <td mat-cell *matCellDef="let element" class="ml-3"> {{element.eps}} </td>
             </ng-container>
 
             <ng-container matColumnDef="Exportar">
@@ -45,7 +45,11 @@
 
             <ng-container matColumnDef="horaDia">
                 <th mat-header-cell *matHeaderCellDef> Dia y hora </th>
-                <td mat-cell *matCellDef="let element"> {{element.horaDia}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.horaDia}} </td>   
+            </ng-container>
+            <ng-container matColumnDef="Iracitamedica">
+                <th mat-header-cell *matHeaderCellDef>Ir a cita medica</th>
+                <td mat-cell *matCellDef="let element"><a [routerLink]="['atenderCita']">Redireccion cita medica</a></td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

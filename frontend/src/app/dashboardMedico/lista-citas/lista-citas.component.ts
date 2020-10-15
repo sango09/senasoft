@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 
 export interface persona {
-  idSolicitante: number;
+  documento: number;
   nombre: string;
   segundoNombre: string;
   apellido: string;
@@ -12,7 +12,7 @@ export interface persona {
 }
 
 const ELEMENT_DATA: persona[] = [
-  {idSolicitante: 1, nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', eps: 'compensar', horaDia : new Date("2019-12-20:05:20:30")}
+  {documento: 123131223, nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', eps: 'compensar', horaDia : new Date("2019-12-12")}
 ]
 
 @Component({
@@ -24,7 +24,7 @@ export class ListaCitasComponent implements OnInit {
 
   constructor() { }
 
-  displayedColumns: string[] = ['idSolicitante', 'nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'eps'  , 'horaDia', 'Exportar']
+  displayedColumns: string[] = ['documento', 'nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'eps'  , 'horaDia', 'Exportar', 'Iracitamedica']
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
 

@@ -1,11 +1,11 @@
-<div class="container shadow-lg p-3 mb-5 rounded" style="background-color: #c4c4c4; margin-top: 30px; padding: 10px;">
+<div class="container shadow-lg p-3 mb-5 rounded" style="background-color: white; padding: 10px;">
     <div style="border-color: white; border-width: 8px;">
         <h2 style="text-align: center; ">Añadir a un familiar</h2>
     </div>
     <form [formGroup]="formularioAnadir">
         <div class="row">
             <div class="col-6">
-                <select formControlName="tipoId" class="btn btn-default btn-outline-light float-right" style="width: 100%;" name="" id="">
+                <select formControlName="tipoId" class="btn btn-outline-secondary float-right" style="width: 100%; color: black;" name="" id="">
                     <optgroup label="Tipo de identificación"></optgroup>
                     <option value="1">CC</option>
                     <option value="2">TI</option>
@@ -43,9 +43,9 @@
         <!-- -->
         <div class="row">
             <div class="col-12 mb-3">
-                <select formControlName="parentezco" class="btn btn-default btn-outline-light col-8 offset-2" name="" id="">
+                <select formControlName="parentezco" class="btn btn-outline-secondary col-8 offset-2" name="" id="">
                     <optgroup label="Parentezco"></optgroup>
-                    <option value="1">Padre</option>
+                    <option class="" value="1">Padre</option>
                     <option value="2">Madre</option>
                     <option value="3">Abuelo</option>
                     <option value="4">Abuela</option>
@@ -61,7 +61,8 @@
                 formularioAnadir.controls.nit.errors || formularioAnadir.controls.tipoId.errors 
                 || formularioAnadir.controls.parentezco.errors; else boton">
                 <div class="alert alert-danger" role="alert">
-                    Formulario con campos no validos!!
+                    ¡Formulario con campos no validos!, No se admiten numeros o caracteres especiales (incluida la ñ) en los campos
+                    de nombre o apellido, ni campos vacios
                 </div>
             </div>
             <ng-template class="col-4" #boton>
