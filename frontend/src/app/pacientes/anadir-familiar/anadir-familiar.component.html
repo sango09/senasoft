@@ -1,0 +1,81 @@
+<div class="container shadow-lg p-3 mb-5 rounded" style="background-color: white; padding: 10px;">
+    <div style="border-color: white; border-width: 8px;">
+        <h2 style="text-align: center; ">Añadir a un familiar</h2>
+    </div>
+    <form [formGroup]="formularioAnadir">
+        <div class="row">
+            <div class="col-6">
+                <select formControlName="tipoId" class="btn btn-outline-secondary float-right" style="width: 100%; color: black;" name="" id="">
+                    <optgroup label="Tipo de identificación"></optgroup>
+                    <option value="1">CC</option>
+                    <option value="2">TI</option>
+                </select>
+            </div>
+            
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-id-card"></i></span>
+                    </div>
+                    <input formControlName="nit" type="number" class="form-control" placeholder="Numero de identificación" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-user-edit"></i></span>
+                    </div>
+                    <input formControlName="name" type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-user-edit"></i></span>
+                    </div>
+                    <input type="text" formControlName="lastName" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+        <!-- -->
+        <div class="row">
+            <div class="col-12 mb-3">
+                <select formControlName="parentezco" class="btn btn-outline-secondary col-8 offset-2" name="" id="">
+                    <optgroup label="Parentezco"></optgroup>
+                    <option class="" value="1">Padre</option>
+                    <option value="2">Madre</option>
+                    <option value="3">Abuelo</option>
+                    <option value="4">Abuela</option>
+                    <option value="5">Hijo</option>
+                    <option value="6">Hija</option>
+                </select>
+            </div>
+        </div>
+        <!-- -->
+        <div class="row">
+            <div  class="shadow-lg p-3 mb-5 rounded col-10 offset-1" *ngIf="formularioAnadir.controls.name.errors
+             || formularioAnadir.controls.lastName.errors || 
+                formularioAnadir.controls.nit.errors || formularioAnadir.controls.tipoId.errors 
+                || formularioAnadir.controls.parentezco.errors; else boton">
+                <div class="alert alert-danger" role="alert">
+                    ¡Formulario con campos no validos!, No se admiten numeros o caracteres especiales (incluida la ñ) en los campos
+                    de nombre o apellido, ni campos vacios
+                </div>
+            </div>
+            <ng-template class="col-4" #boton>
+                <button class="btn btn-primary" style="width: 100%;" type="submit">Añadir</button>
+            </ng-template>
+        </div>
+    </form>
+</div>
+
+<!--
+    0. tipo de identificación
+    1. nit del beneficiario
+    2. nombre
+    3. apellido
+    4. parentezco
+-->

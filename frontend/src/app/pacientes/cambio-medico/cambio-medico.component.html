@@ -1,0 +1,27 @@
+<div class="shadow p-3 mb-5 bg-white rounded" style=" background-color : white; padding: 10px; border-color: black; border-width: 30px;">
+    <h2 style="text-align: center;">Cambio de médico</h2>
+    <form>
+        <div class="p-grid p-fluid">
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input type="text" pInputText placeholder="{{user.name}} {{user.lastName}}" disabled="True">         
+                </div>
+            </div>
+            
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input type="text" pInputText placeholder="{{doctor.name}} {{doctor.lastName}}" disabled="true">         
+                </div>
+            </div>
+            
+            <div class="p-col-12 p-col-md-6" style="padding: 10px;">
+                <textarea [rows]="5" [cols]="15" pInputTextarea autoResize="autoResize" placeholder="Razón"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" >
+            Enviar solicitud
+        </button>
+    </form>
+</div>

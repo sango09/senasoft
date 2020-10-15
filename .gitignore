@@ -82,3 +82,8 @@ typings/
 # Docs Custom
 .cache/
 yarn-error.log
+
+backend/.idea/*
+
+
+backend/.idea/

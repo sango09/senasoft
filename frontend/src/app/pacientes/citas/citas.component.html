@@ -1,0 +1,73 @@
+<div class="">
+    <div class="row">
+        <div class="p-grid p-fluid col-8" style="padding-bottom: 15px;">
+            <div class="">
+                <label for="usuario">Datos de usuario:  </label>
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input id="usuario" type="text" pInputText placeholder="{{user.name}} {{user.lastName}}" disabled="true">         
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-12 shadow p-3 mb-5 bg-white rounded">
+                <div style="margin-top: 30px;">
+                    <p-table #dt [value]="customers" dataKey="id"
+                        [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers"
+                        [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                        [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
+                        <ng-template pTemplate="caption">
+                            <div class="table-header">
+                                Lista de citas
+                                <span class="p-input-icon-left">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Busqueda global" />
+                                </span>
+                            </div>
+                        </ng-template>
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>No. cita</th>
+                                <th>Fecha</th>
+                                <th>Exportación</th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input pInputText type="text" (input)="dt.filter($event.target.value, 'name', 'startsWith')" placeholder="Busqueda por numero" class="p-column-filter">
+                                </th>
+                                <th>
+                                    <p-calendar (onSelect)="onDateSelect($event)" (onClearClick)="dt.filter('', 'date', 'equals')" [showButtonBar]="true" styleClass="p-column-filter" placeholder="Fecha de registro" [readonlyInput]="true" dateFormat="yy-mm-dd"></p-calendar>
+                                </th>
+                                <th>
+                                    
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-customer>
+                            <tr>
+                                <td>
+                                    {{customer.name}}
+                                </td>
+                                <td>
+                                    {{customer.date}}
+                                </td>
+                                <td>
+                                    <button class="btn btn-info">Exportar</button>
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="emptymessage">
+                            <tr>
+                                <td colspan="6">No se encontraron resultados</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+    </div>
+    <!-- table -->
+    <div class="row">
+        
+    </div>
+</div>
