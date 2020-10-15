@@ -8,12 +8,11 @@ export interface persona {
   segundoApellido: string;
   email: string;
   eps: string;
-  export: string;
 }
 
 const ELEMENT_DATA: persona[] = [
-  {segundoNombre: 'santiago', nombre: 'santiago', apellido: 'gomez', segundoApellido: 'florez', email: 'nose123@gmail.com', eps: 'famisanar', export: 'asdasd'},
-  {segundoNombre: 'juan', nombre: 'santiago', apellido: 'gomez', segundoApellido: 'florez', email: 'nose123@gmail.com', eps: 'famisanar', export: 'asdasd'},
+  {segundoNombre: 'santiago', nombre: 'santiago', apellido: 'gomez', segundoApellido: 'florez', email: 'nose123@gmail.com', eps: 'famisanar'},
+  {segundoNombre: 'juan', nombre: 'santiago', apellido: 'gomez', segundoApellido: 'florez', email: 'nose123@gmail.com', eps: 'famisanar' },
 ]
 
 @Component({

@@ -6,11 +6,14 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['homeMedico']">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['homeMedico']"><i class="fas fa-house-user mr-2" id="iconos"></i>Home
+            <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pacientes
+              <i class="fas fa-user-friends mr-2" id="iconos"></i>Pacientes
+
+
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" [routerLink]="['detallesPacientes']" >Detalles pacientes</a>
@@ -19,22 +22,35 @@
           </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Remiciones
+              <i class="fas fa-file-medical mr-2" id="iconos"></i>Remiciones
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Remitir pacientes</a>
-                <a class="dropdown-item" href="#">Pacientes remitidos</a>
+                <a class="dropdown-item" [routerLink]="['remitirPaciente']">Remitir pacientes</a>
+                <a class="dropdown-item" [routerLink]="['listaRemitidos']">Pacientes remitidos</a>
+                <a class="dropdown-item" [routerLink]="['remitirExamenes']">Remitir examenes medicos</a>
+                <a class="dropdown-item" [routerLink]="['remitirMedicamentos']">Remitir medicamentos</a>
               </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Comunicaciones
+            <i class="fas fa-tty mr-2" id="iconos"></i>Comunicaciones
+
+
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Atender cita medica</a>
-            <a class="dropdown-item" href="#">Lista de citas medicas</a>
+            <a class="dropdown-item" [routerLink]="['atenderCita']">Atender cita medica</a>
+            <a class="dropdown-item" [routerLink]="['listaCitas']">Lista de citas medicas</a>
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-pump-medical mr-2" id="iconos"></i>Incapacidades
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" [routerLink]="['remitirIncapacidad']">Remitir incapacidad</a>
+          </div>
+        </li>
+
         <li class="nav-item ">
           <a class="btn btn-danger" id="botonSalir">salir</a>
         </li>
@@ -42,6 +58,6 @@
     </div>
   </nav>
 
-  <div class="">
+  <div class="container">
     <router-outlet></router-outlet>
   </div>

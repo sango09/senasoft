@@ -29,9 +29,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: black;
     text-decoration: none;
 }
-a{
+a {
     text-decoration: none;
     color: black;
+}
+
+#iconos{
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+}
+
+#iconos:hover{
+    text-decoration: none;
+    color: rgb(88, 179, 231);
 }
 
 a:hover{
@@ -46,7 +56,7 @@ a:active{
 }
 
 #botonSalir{
-    margin-left: 680px;
+    margin-left: 400px;
 }
 
 table {
@@ -57,3 +67,26 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+#familiares{
+    margin-top: 150px;
+}
+
+#remitirPacientes{
+    padding-top: 100px;
+}
+
+#botonRemitir{
+    margin: 20px;
+}
+
+#cita{
+    margin-top: 150px;
+    margin-left: 50px;
+    width: 30rem;
+}
+
+#formularioCita{
+    margin-top: 300px;
+    margin-right: 200px;
+}

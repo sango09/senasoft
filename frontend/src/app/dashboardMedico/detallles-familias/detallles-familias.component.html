@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col">
-    <mat-form-field>
+    <mat-form-field class="animate__animated animate__bounceInRight">
       <mat-label>Filtrar</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Todos los campos pueden ser validos" #input>
     </mat-form-field>
     
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 animate__animated animate__bounceInRight">
     
       <ng-container matColumnDef="idFamilia">
         <th mat-header-cell *matHeaderCellDef> ID familia </th>
@@ -48,7 +48,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
-  <div class="col">
+  <div class="col " id="familiares">
     <router-outlet></router-outlet>
   </div>
 </div>

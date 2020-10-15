@@ -3,16 +3,15 @@ import {MatTableDataSource} from '@angular/material/table';
 
 
 export interface persona {
-  primerNombre: string;
+  nombre: string;
   segundoNombre: string;
   apellido: string;
   segundoApellido: string;
   parentezco: string;
-
 }
 
 const ELEMENT_DATA: persona[] = [
-  {primerNombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', parentezco: 'hijo'}
+  { nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', parentezco: 'hijo'}
 ]
 
 @Component({
@@ -22,12 +21,19 @@ const ELEMENT_DATA: persona[] = [
 })
 export class PacientesAsociadosComponent implements OnInit {
 
-  displayedColumns: string[] = ['primerNombre', 'segundoNombre', 'apellido', 'segundoApellido', 'parentezco'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
 
   constructor() { }
 
+  displayedColumns: string[] = ['nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'parentezco']
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
   ngOnInit(): void {
+  }
+
+  applyFilter(event: Event) { 
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }

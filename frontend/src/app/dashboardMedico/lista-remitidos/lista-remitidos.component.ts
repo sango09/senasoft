@@ -1,29 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 
+
 export interface persona {
-  idFamilia: number;
   nombre: string;
   segundoNombre: string;
   apellido: string;
   segundoApellido: string;
   eps: string;
+  remitente: string;
 }
 
 const ELEMENT_DATA: persona[] = [
-  {idFamilia: 1, nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', eps: 'compensar'}
+  {nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', eps: 'compensar', remitente: 'santiago'},
 ]
 
 @Component({
-  selector: 'app-detallles-familias',
-  templateUrl: './detallles-familias.component.html',
-  styleUrls: ['./detallles-familias.component.css']
+  selector: 'app-lista-remitidos',
+  templateUrl: './lista-remitidos.component.html',
+  styleUrls: ['./lista-remitidos.component.css']
 })
-export class DetalllesFamiliasComponent implements OnInit {
+export class ListaRemitidosComponent implements OnInit {
 
   constructor() { }
 
-  displayedColumns: string[] = ['idFamilia', 'nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'eps', 'desplegar']
+  displayedColumns: string[] = ['nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'eps', 'exportar', 'remitente']
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   ngOnInit(): void {

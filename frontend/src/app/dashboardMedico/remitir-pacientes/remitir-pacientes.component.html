@@ -1,0 +1,39 @@
+<div class="container animate__animated animate__bounceInUp" id="remitirPacientes">
+    <div class="card ">
+        <div class="card-title text-center">
+            <button type="button" class="btn btn-info align-items-center" id="botonRemitir">Remitir a otro especialista</button>
+        </div>
+        <div class="card-body ">
+            <div class="">
+                <form [formGroup]="formGroup">
+                    <div class="row">
+
+                      <div class="col">
+                        <input type="number" formControlName="documento" class="form-control" placeholder="Ingrese documento del paciente">
+                        <div *ngIf="formGroup.controls.documento.errors" class="text-danger">
+                          Ingrese el documento del paciente
+                      </div>
+                      </div>
+                      
+                      <div class="col">
+                        <select class="form-control" formControlName="select" id="exampleFormControlSelect1">
+                            <option>Ginecologia</option>
+                            <option>Dermatologia</option>
+                            <option>Oftalmologia</option>
+                            <option>Traumatologia</option>
+                            <option>Cardiologia</option>
+                          </select>
+                          <div *ngIf="formGroup.controls.select.errors" class="text-danger">
+                            Seleccione una opcion
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary align-items-center mt-4">Enviar</button>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</div>
