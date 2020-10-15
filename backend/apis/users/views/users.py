@@ -53,6 +53,17 @@ class UserViewSet(mixins.RetrieveModelMixin,
         }
         return Response(data, status=status.HTTP_201_CREATED)
 
+    @action(detail=False)
+    def pacients(self, request):
+        recent_users = User.objects.filter(is_pacient=True)
+        page = self.paginate_queryset(recent_users)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(recent_users, many=True)
+        return Response(serializer.data)
+
     def retrieve(self, request, *args, **kwargs):
         """Agrega informacion extra a la respuesta"""
         response = super(UserViewSet, self).retrieve(request, *args, **kwargs)

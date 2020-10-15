@@ -13,6 +13,7 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   usuario: UsuarioLoginModel = new UsuarioLoginModel();
+  user;
 
   constructor(private auth: LoginService,
               private router: Router) {
@@ -36,14 +37,21 @@ export class LoginComponent implements OnInit {
 
     this.auth.login(this.usuario)
       .subscribe(resp => {
-        console.log(resp);
         Swal.close();
-        this.router.navigateByUrl('/medico');
+        this.user = resp
+        console.log(this.user.user.is_medic)
+        if (this.user.user.is_medic === true) {
+          console.log('es un medico')
+          this.router.navigateByUrl('/medico')
+        } else if (this.user.user.is_pacient == true) {
+          this.router.navigateByUrl('/paciente')
+        }
+
       }, (err) => {
         console.log(err.error.error.message);
         Swal.fire({
           icon: 'error',
-          title: 'paso algo malo :o',
+          title: 'Credentiales invalidas',
           text: err.error.error.message
         });
       });

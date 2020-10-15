@@ -1,18 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
+import {paciente} from "../../models/paciente.model";
+import {PacientsService} from "../../services/pacients.service";
 
-
-export interface persona {
-  nombre: string;
-  segundoNombre: string;
-  apellido: string;
-  segundoApellido: string;
-  parentezco: string;
-}
-
-const ELEMENT_DATA: persona[] = [
-  { nombre: 'juan', segundoNombre: 'pablo', apellido: 'ardila', segundoApellido: 'otero', parentezco: 'hijo'}
-]
+const ELEMENT_DATA: paciente[] = []
 
 @Component({
   selector: 'app-pacientes-asociados',
@@ -21,19 +12,23 @@ const ELEMENT_DATA: persona[] = [
 })
 export class PacientesAsociadosComponent implements OnInit {
 
+  pacients: paciente = new paciente();
+  pacientes;
 
-
-  constructor() { }
-
-  displayedColumns: string[] = ['nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'parentezco']
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  constructor(private asignados: PacientsService) {
+  }
 
   ngOnInit(): void {
   }
 
-  applyFilter(event: Event) { 
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  displayedColumns: string[] = ['nombre', 'segundoNombre', 'apellido', 'segundoApellido', 'parentezco']
+  datasource = new MatTableDataSource(ELEMENT_DATA)
 
+  getListPacients() {
+    this.asignados.getPacientes()
+      .subscribe(resp => {
+        this.pacientes = resp
+      })
+  }
 }
+

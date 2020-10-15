@@ -1,39 +1,38 @@
-<div class="card mt-5 animate__animated animate__bounceInLeft" >
-    <div class="card-title text-center">Familiares</div>
-    <div class="card-body">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 animate__animated animate__bounceInLeft">
-    
-  
-    <ng-container matColumnDef="nombre">
-      <th mat-header-cell *matHeaderCellDef> Nombre del familiar </th>
-      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="segundoNombre">
-      <th mat-header-cell *matHeaderCellDef> Segundo Nombre del familiar</th>
-      <td mat-cell *matCellDef="let element"> {{element.segundoNombre}} </td>
-    </ng-container>
-  
-  
-    <ng-container matColumnDef="apellido">
-      <th mat-header-cell *matHeaderCellDef> Apellido del familiar </th>
-      <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
-    </ng-container>
-    <ng-container matColumnDef="segundoApellido">
-      <th mat-header-cell *matHeaderCellDef> Segundo apellido del familiar </th>
-      <td mat-cell *matCellDef="let element"> {{element.segundoApellido}} </td>
-    </ng-container>
-  
-  
-    <ng-container matColumnDef="parentezco">
-      <th mat-header-cell *matHeaderCellDef> parentezco </th>
-      <td mat-cell *matCellDef="let element"> {{element.parentezco}} </td>
-    </ng-container>
-  
-  
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
+<div class="card mt-5 animate__animated animate__bounceInLeft">
+  <div class="card-title text-center">Familiares</div>
+  <div class="card-body">
+    <table mat-table class="mat-elevation-z8 animate__animated animate__bounceInLeft">
+
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre del familiar</th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="segundoNombre">
+        <th mat-header-cell *matHeaderCellDef> Segundo Nombre del familiar</th>
+        <td mat-cell *matCellDef="let element"> {{element.segundoNombre}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="apellido">
+        <th mat-header-cell *matHeaderCellDef> Apellido del familiar</th>
+        <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+      </ng-container>
+      <ng-container matColumnDef="segundoApellido">
+        <th mat-header-cell *matHeaderCellDef> Segundo apellido del familiar</th>
+        <td mat-cell *matCellDef="let element"> {{element.segundoApellido}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="parentezco">
+        <th mat-header-cell *matHeaderCellDef> parentezco</th>
+        <td mat-cell *matCellDef="let element"> {{element.parentezco}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
 </div>
