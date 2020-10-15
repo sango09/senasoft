@@ -9,14 +9,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-4" >
-            <label for="">presiona para chat</label><br>
-            <button class="btn btn-primary rounded">Chat</button>
-        </div>
     </div>
     <div class="row">
-        <div class="col-12 shadow-lg p-3 mb-5 bg-white rounded" style="background-color: #c4c4c4!important; padding: 10px; ">
-            <div class="col-12">
+            <div class="col-12 shadow p-3 mb-5 bg-white rounded">
                 <div style="margin-top: 30px;">
                     <p-table #dt [value]="customers" dataKey="id"
                         [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers"
@@ -58,7 +53,7 @@
                                     {{customer.date}}
                                 </td>
                                 <td>
-                                    <p-progressBar [value]="customer.activity" [showValue]="false"></p-progressBar>
+                                    <button class="btn btn-info">Exportar</button>
                                 </td>
                             </tr>
                         </ng-template>
@@ -70,7 +65,6 @@
                     </p-table>
                 </div>
             </div>
-        </div>
     </div>
     <!-- table -->
     <div class="row">

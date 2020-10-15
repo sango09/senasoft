@@ -1,4 +1,4 @@
-<div style="margin-top: 30px;">
+<div style="margin-top: 30px;" class="shadow p-3 mb-5 bg-white rounded">
     <p-table #dt [value]="customers" dataKey="id"
         [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers"
         [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
@@ -52,7 +52,7 @@
                     <span class="image-text">{{customer.representative.name}}</span>
                 </td>
                 <td>
-                    <p-progressBar [value]="customer.activity" [showValue]="false"></p-progressBar>
+                    <button class="btn btn-info">Exportar</button>
                 </td>
             </tr>
         </ng-template>
