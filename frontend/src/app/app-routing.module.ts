@@ -6,6 +6,7 @@ import { IncapacidadesComponent } from './pacientes/incapacidades/incapacidades.
 import { CambioMedicoComponent } from './pacientes/cambio-medico/cambio-medico.component';
 import { CitasComponent } from './pacientes/citas/citas.component';
 import { BeneficiariosComponent } from './pacientes/beneficiarios/beneficiarios.component';
+import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-familiar.component';
 
 const routes: Routes = [
   {path: 'app-inicio', component: InicioComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'app-incapacidades', component: IncapacidadesComponent},
   {path: 'app-cambio-medico', component: CambioMedicoComponent},
   {path: 'app-citas', component: CitasComponent},
-  {path: 'app-beneficiarios', component: BeneficiariosComponent}
+  {path: 'app-beneficiarios', component: BeneficiariosComponent},
+  {path: 'app-anadir-familiar', component: AnadirFamiliarComponent}
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material-module';
 import {HttpClientModule} from '@angular/common/http';
 import {RatingModule} from 'primeng/rating';
-import {FormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainComponent } from './pacientes/main/main.component';
 import { NavBarComponent } from './pacientes/nav-bar/nav-bar.component';
 import { InicioComponent } from './pacientes/inicio/inicio.component';
@@ -30,6 +30,7 @@ import { CambioMedicoComponent } from './pacientes/cambio-medico/cambio-medico.c
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { CitasComponent } from './pacientes/citas/citas.component';
 import { BeneficiariosComponent } from './pacientes/beneficiarios/beneficiarios.component';
+import { AnadirFamiliarComponent } from './pacientes/anadir-familiar/anadir-familiar.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { BeneficiariosComponent } from './pacientes/beneficiarios/beneficiarios.
     IncapacidadesComponent,
     CambioMedicoComponent,
     CitasComponent,
-    BeneficiariosComponent
+    BeneficiariosComponent,
+    AnadirFamiliarComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { BeneficiariosComponent } from './pacientes/beneficiarios/beneficiarios.
     ToastModule,
     InputTextModule,
     ProgressBarModule,
-    InputTextareaModule
+    InputTextareaModule,
+    ReactiveFormsModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent,MainComponent,NavBarComponent]
