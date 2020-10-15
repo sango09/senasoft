@@ -3,14 +3,13 @@ import {HttpClient} from '@angular/common/http';
 import {UsuarioLoginModel} from '../models/usuario.model';
 import {map} from "rxjs/operators";
 
-const BASE_URL = 'localhost:8000/users/login/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private url = 'localhost:8000/users/login/';
+  private url = 'http://localhost:8000/users/login/';
   userToken: string;
 
   constructor(private http: HttpClient) {
