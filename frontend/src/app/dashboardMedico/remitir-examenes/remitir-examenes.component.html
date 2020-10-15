@@ -1,0 +1,49 @@
+
+<div class="container animate__animated animate__bounceInUp" id="remitirPacientes">
+    <div class="card ">
+        <div class="card-title text-center">
+            <button type="button" class="btn btn-info align-items-center" id="botonRemitir">Remitir examenes</button>
+        </div>
+        <div class="card-body ">
+            <div class="">
+                <form [formGroup]="formGroup">
+                    <div class="row">
+                      <div class="col form-group">
+                        <input type="number"  formControlName="documento"  class="form-control" id="exampleInputEmail1" placeholder="Ingrese documento del paciente" aria-describedby="emailHelp">
+                        <div *ngIf="formGroup.controls.documento.errors" class="text-danger">Ingrese el numero de documento del paciente</div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col form-group">
+                            <label for="">Ingrese fecha del examen medico</label>
+                         <input type="date" formControlName="fechaExamen" class="form-control">
+                         <div *ngIf="formGroup.controls.fechaExamen.errors" class="text-danger">Ingrese fecha del examen medico</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col form-group">
+                            <label for="">Ingrese fecha de remicion del examen medico</label>
+                         <input type="date" formControlName="fechaRemicion" class="form-control">
+                         <div *ngIf="formGroup.controls.fechaRemicion.errors" class="text-danger">Ingrese la fecha del examen medigo</div>
+                        </div>
+                        <div class="col form-group">
+
+                            <input type="text" formControlName="nombreExamen" placeholder="ingrese el nombre del examen" class="form-control">
+                            <div *ngIf="formGroup.controls.nombreExamen.errors" class="text-danger">Ingrese nombre del examen</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col form-group">
+                            <textarea class="form-control" formControlName="texto" placeholder="Ingrese la descripcion del examen"></textarea>
+                            <div *ngIf="formGroup.controls.texto.errors" class="text-danger">Ingrese descripcion del examen</div>
+                        </div>
+                    </div>
+                  </form>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary align-items-center mt-4">Enviar</button>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</div>

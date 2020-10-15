@@ -1,0 +1,47 @@
+<mat-form-field class="animate__animated animate__bounceInUp">
+    <mat-label>Filtrar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Todos los campos pueden ser validos" #input>
+  </mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 animate__animated animate__bounceInUp">
+  
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre titular </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="segundoNombre">
+      <th mat-header-cell *matHeaderCellDef> Segundo Nombre titular </th>
+      <td mat-cell *matCellDef="let element"> {{element.segundoNombre}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="apellido">
+      <th mat-header-cell *matHeaderCellDef> Apellido titular </th>
+      <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+    </ng-container>
+    <ng-container matColumnDef="segundoApellido">
+      <th mat-header-cell *matHeaderCellDef> Segundo apellido </th>
+      <td mat-cell *matCellDef="let element"> {{element.segundoApellido}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="eps">
+      <th mat-header-cell *matHeaderCellDef > EPS </th>
+      <td mat-cell *matCellDef="let element"> {{element.eps}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="exportar">
+        <th mat-header-cell *matHeaderCellDef> Exportar</th>
+        <td mat-cell *matCellDef="let element"><a href="">Exportar historial clinico</a></td>
+      </ng-container>
+      
+    <ng-container matColumnDef="remitente">
+        <th mat-header-cell *matHeaderCellDef> Remitente</th>
+        <td mat-cell *matCellDef="let element">{{element.remitente}}</td>
+      </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
