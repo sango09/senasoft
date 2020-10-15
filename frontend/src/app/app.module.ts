@@ -48,6 +48,7 @@ import {CitasComponent} from './pacientes/citas/citas.component';
 import {BeneficiariosComponent} from './pacientes/beneficiarios/beneficiarios.component';
 import {AnadirFamiliarComponent} from './pacientes/anadir-familiar/anadir-familiar.component';
 import { MainPacientesComponent } from './pacientes/main-pacientes/main-pacientes.component';
+import {LoginService} from "./services/login.service";
 
 
 @NgModule({
@@ -102,7 +103,7 @@ import { MainPacientesComponent } from './pacientes/main-pacientes/main-paciente
     InputTextareaModule,
     ReactiveFormsModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService, LoginService],
   bootstrap: [AppComponent, MainComponent, NavBarComponent]
 })
 export class AppModule {

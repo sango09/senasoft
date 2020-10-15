@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { NgForm } from '@angular/forms';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-remitir-pacientes',
@@ -21,5 +22,5 @@ export class RemitirPacientesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  }
 
-}

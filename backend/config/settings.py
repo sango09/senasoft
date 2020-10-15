@@ -120,7 +120,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sena_soft',
         'USER': 'postgres',
-        'PASSWORD': '123',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'POST': '5432'
     }
@@ -182,3 +182,15 @@ STATICFILES_FINDERS = [
 # Media
 MEDIA_ROOT = str(APPS_DIR('media'))
 MEDIA_URL = '/media/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+EMAIL_USL_TLS = True
+EMAIL_HOST = 'noreply@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sgomez2113@misena.edu.co'
+EMAIL_HOST_PASSWORD = 'Infinit@10'
