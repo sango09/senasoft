@@ -1,0 +1,55 @@
+<div class="shadow rounded" style="padding: 10px;">
+    <h2 style="text-align: center;">Crear cita</h2>
+    <form [formGroup]="formularioCita">
+        <div class="row">
+            <div class="input-group mb-3 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-user-plus"></i></span>
+                </div>
+                <input formControlName="medico" type="text" class="form-control" placeholder="Nombre medico" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-user"></i></span>
+                </div>
+                <input formControlName="usuario" type="text" class="form-control" placeholder="Nombre usuario" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-calendar"></i></span>
+                </div>
+                <input formControlName="fecha" type="date" class="form-control" placeholder="fecha" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="pi pi-times-circle"></i></span>
+                </div>
+                <input formControlName="hora" type="text" class="form-control" placeholder="hora" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group col-12">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Sintomas</span>
+                </div>
+                <textarea formControlName="sintomas" style="max-height: 150px;" class="form-control" aria-label="With textarea"></textarea>
+              </div>
+        </div>
+        <div *ngIf="formularioCita.controls.medico.errors || formularioCita.controls.usuario.errors
+        || formularioCita.controls.fecha.errors || formularioCita.controls.hora.errors
+        || formularioCita.controls.sintomas.errors; else estamal">
+            <div class="alert alert-danger mt-3" role="alert">
+                Campos invalidos
+            </div>
+        </div>
+        <div #estamal>
+            <button type="submit" class="btn btn-primary mt-3 float-right">Crear cita</button>
+        </div>
+    </form>
+</div>

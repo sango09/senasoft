@@ -22,6 +22,7 @@ import { RemitirIncapacidadComponent } from './dashboardMedico/remitir-incapacid
 import { RemitirMedicamentosComponent } from './dashboardMedico/remitir-medicamentos/remitir-medicamentos.component';
 import { RemitirPacientesComponent } from './dashboardMedico/remitir-pacientes/remitir-pacientes.component';
 import { MainPacientesComponent } from './pacientes/main-pacientes/main-pacientes.component';
+import { CrearCitaComponent } from './pacientes/crear-cita/crear-cita.component';
 
 const routes: Routes = [
   {path: 'mainPacientes', component: MainPacientesComponent,
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path: 'app-citas', component: CitasComponent},
     {path: 'app-beneficiarios', component: BeneficiariosComponent},
     {path: 'app-anadir-familiar', component: AnadirFamiliarComponent},
+    {path: 'app-crear-cita', component: CrearCitaComponent}
   ]
   },
   {path: 'login', component: LoginComponent},
