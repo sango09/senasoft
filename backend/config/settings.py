@@ -187,9 +187,3 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
-
-EMAIL_USL_TLS = True
-EMAIL_HOST = 'noreply@gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'sgomez2113@misena.edu.co'
-EMAIL_HOST_PASSWORD = 'Infinit@10'
